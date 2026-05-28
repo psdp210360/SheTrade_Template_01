@@ -1,28 +1,168 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset='UTF-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'>
-<title>Decor Store</title>
-<link rel='stylesheet' href='style.css'>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Feverish Decor Store</title>
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
 <header>
-<h1>Luxury Decor Store</h1>
+
+<div class="topbar">
+<div class="social-icons">
+
+<a href="#"><img src="icons/instagram.png"></a>
+<a href="#"><img src="icons/facebook.png"></a>
+<a href="https://wa.me/201001234433"><img src="icons/whatsapp.png"></a>
+
+</div>
+
+<div class="top-contact">
+info@feverishdecor.com
+</div>
+</div>
+
+<div class="main-header">
+
+<div class="logo-wrap">
+<img src="Assets/logo.png" class="logo">
+
+<div>
+<h1>Feverish Decor</h1>
+<p>Luxury Handmade Collection</p>
+</div>
+</div>
+
+<nav>
+<a href="#">Home</a>
+<a href="#products">Products</a>
+<a href="#basket">Basket</a>
+<a href="#contact">Contact</a>
+</nav>
+
+</div>
+
 </header>
 
-<section class='hero'>
-<img src='Assets/banner.jpg'>
+<section class="hero">
+
+<img src="Assets/banner.jpg" loading="lazy">
+
+<div class="overlay">
+
+<h2>Luxury Handmade Decor</h2>
+
+<p>
+Colorful • Modern • Artistic • Premium
+</p>
+
+<a href="#products" class="hero-btn">
+Explore Collection
+</a>
+
+</div>
+
 </section>
 
-<section class='products'>
-<input id='searchInput' placeholder='Search products'>
-<div id='productsGrid' class='grid'></div>
+<section class="products" id="products">
+
+<h2>Featured Collection</h2>
+
+<div class="products-grid" id="productsGrid"></div>
+
 </section>
 
-<script src='https://cdn.jsdelivr.net/npm/papaparse@5.4.1/papaparse.min.js'></script>
-<script src='script.js'></script>
+<section class="basket" id="basket">
+
+<h2>Your Basket</h2>
+
+<div id="basketItems"></div>
+
+<div class="basket-footer">
+
+<div id="basketTotal">
+Total: 0 EGP
+</div>
+
+<a id="checkoutBtn" class="checkout-btn" target="_blank">
+Checkout on WhatsApp
+</a>
+
+</div>
+
+</section>
+
+<section class="contact-form-section" id="contact">
+
+<h2>Contact Us</h2>
+
+<form class="contact-form">
+
+<input type="text" placeholder="Your Name">
+
+<input type="email" placeholder="Your Email">
+
+<textarea placeholder="Your Message"></textarea>
+
+<button type="submit">
+Send Message
+</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<div class="footer-grid">
+
+<div>
+<h3>Feverish Decor</h3>
+<p>
+Luxury handmade home decor and accessories.
+</p>
+</div>
+
+<div>
+<h3>Quick Links</h3>
+<p>Home</p>
+<p>Products</p>
+<p>Basket</p>
+<p>Contact</p>
+</div>
+
+<div>
+<h3>Connect</h3>
+
+<div class="footer-socials">
+
+<a href="#"><img src="icons/instagram.png"></a>
+
+<a href="#"><img src="icons/facebook.png"></a>
+
+<a href="https://wa.me/201001234433">
+<img src="icons/whatsapp.png">
+</a>
+
+</div>
+
+<p>Email: info@feverishdecor.com</p>
+
+</div>
+
+</div>
+
+<div class="copyright">
+© 2026 Feverish Decor | SheTrade Copywrite
+</div>
+
+</footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>
