@@ -1,0 +1,1 @@
+Edit data/products.xlsx or CSV to manage products.
