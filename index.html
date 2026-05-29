@@ -797,7 +797,7 @@
 <body>
   <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
   <header>
-    <div class="top-bar">Free Shipping on Orders Over $200 | WhatsApp: +20 100 123 4433</div>
+    <div class="top-bar">Free Shipping on Orders Over LE 200 | WhatsApp: +20 100 123 4433</div>
     <nav>
       <div class="logo-area">
         <img id="logoImg" src="Assets/logo.png" alt="Logo" onerror="this.style.display='none'">
@@ -871,7 +871,7 @@
     </div>
     <div class="cart-items" id="cartItems"></div>
     <div class="cart-footer">
-      <div class="cart-total"><span>Total:</span><span id="cartTotal">$0.00</span></div>
+      <div class="cart-total"><span>Total:</span><span id="cartTotal">0.00</span></div>
       <button class="checkout-btn" onclick="checkoutWhatsApp()"><i class="fab fa-whatsapp"></i> Checkout via
         WhatsApp</button>
     </div>
@@ -912,6 +912,7 @@
       </div>
   </footer>
   <script>
+
     let products = [];
     let cart = [];
     let siteInfo = {};
@@ -1028,7 +1029,8 @@
         <h3 class="product-name">${product.name}</h3>
         <p class="product-desc">${product.description || 'Quality home decor item'}</p>
         <div class="product-footer">
-          <div class="product-price">$${parseFloat(product.price).toFixed(2)}</div>
+       
+          <div class="product-price">${parseFloat(product.price).toFixed(2)} EGP</div>
           <button class="add-to-cart" onclick="addToCart(${product.id})">
             <i class="fas fa-cart-plus"></i> Add
           </button>
@@ -1103,7 +1105,8 @@
     `;
       });
       cartCount.textContent = count;
-      cartTotal.textContent = `$${total.toFixed(2)}`;
+
+      cartTotal.textContent = `${total.toFixed(2)} EGP`;
     }
     function toggleCart() {
       document.getElementById('cartSidebar').classList.toggle('active');
@@ -1119,7 +1122,8 @@
       cart.forEach((item, index) => {
         const itemTotal = item.price * item.qty;
         total += itemTotal;
-        message += `${index + 1}. ${item.name}%0A Qty: ${item.qty} x $${parseFloat(item.price).toFixed(2)} = $${itemTotal.toFixed(2)}%0A%0A`;
+
+        message += `${index + 1}. ${item.name}%0A Qty: ${item.qty} x ${parseFloat(item.price).toFixed(2)} EGP = ${itemTotal.toFixed(2)} EGP%0A%0A`;
       });
       message += `*Total: $${total.toFixed(2)}*%0A%0APlease confirm my order!`;
       window.open(`https://wa.me/${whatsappNumber}?text=${message}`, '_blank');
