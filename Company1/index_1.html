@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SheTrade OneDrive Store</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+  <img id="logo" class="logo">
+  <div>
+    <h1 id="companyName">SheTrade Store</h1>
+    <div id="tagline"></div>
+  </div>
+</header>
+
+<section class="hero">
+  <img id="banner">
+</section>
+
+<section class="searchBar">
+<input id="searchBox" placeholder="Search products">
+</section>
+
+<div id="products" class="grid"></div>
+
+<div id="modal" class="modal">
+ <div class="modalBox">
+   <span class="close" onclick="closeModal()">×</span>
+   <img id="modalImg">
+   <h2 id="modalTitle"></h2>
+   <p id="modalDesc"></p>
+   <h3 id="modalPrice"></h3>
+   <a id="waBtn" target="_blank">Order via WhatsApp</a>
+ </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
